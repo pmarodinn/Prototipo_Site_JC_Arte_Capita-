@@ -1,0 +1,503 @@
+/* Individual Artist Page Styles */
+/* Override de fonte: Lora */
+body.individual-artist-page {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
+:root {
+    --primary-navy: #1f2958;
+    --primary-light: #c7c8c9;
+    --accent-cyan: #26bbbe;
+    --accent-red: #aa2221;
+    --accent-pink: #bc6f71;
+    --text-light: #cecfd0;
+    --text-dark: #333;
+    --background-light: #fafafa;
+}
+
+/* Artist Hero Section */
+.artist-hero {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-cyan) 50%, var(--accent-pink) 100%);
+    color: var(--white);
+    padding: 140px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.artist-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    background-image: url('../images/logos/logo_JC.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    opacity: 0.05;
+    z-index: 1;
+    border-radius: 50px;
+    filter: blur(2px);
+}
+
+.artist-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.artist-main-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artist-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portrait-placeholder {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.artist-details h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.artist-category {
+    font-size: 1.5rem;
+    color: var(--accent-cyan);
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.artist-location {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.artist-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Biography Section */
+.artist-biography {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.biography-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.biography-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.biography-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    border-radius: 2px;
+}
+
+.biography-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.biography-highlights h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.highlights-list {
+    list-style: none;
+}
+
+.highlights-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.highlights-list li:last-child {
+    border-bottom: none;
+}
+
+.year {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 8px;
+}
+
+.achievement {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Gallery Section */
+.artist-gallery {
+    padding: 120px 0;
+    background: var(--background-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    border-radius: 2px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artwork-item {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.artwork-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.artwork-image {
+    height: 250px;
+    background: linear-gradient(135deg, var(--primary-light), var(--text-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-artwork {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--accent-cyan);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.artwork-info {
+    padding: 30px 25px;
+}
+
+.artwork-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.artwork-info p {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.artwork-year {
+    color: var(--accent-cyan) !important;
+    font-weight: 500;
+}
+
+.artwork-price {
+    color: var(--accent-red) !important;
+    font-weight: 700;
+    font-size: 1.1rem !important;
+    margin-top: 15px !important;
+}
+
+/* Contact Artist Section */
+.contact-artist {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 24px;
+}
+
+.contact-method h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.contact-method p {
+    color: var(--accent-cyan);
+    font-weight: 500;
+    margin: 0;
+}
+
+.contact-form-container {
+    background: var(--background-light);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: var(--transition-fast);
+    background: var(--white);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 3px rgba(38, 187, 190, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .artist-main-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .biography-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .artist-stats-grid {
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .artist-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .artist-portrait {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .portrait-placeholder {
+        font-size: 3rem;
+    }
+    
+    .artist-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .biography-text h2,
+    .section-title,
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-container {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-hero::before {
+        width: 300px;
+        height: 300px;
+        right: -50px;
+    }
+    
+    .artist-portrait {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .portrait-placeholder {
+        font-size: 2.5rem;
+    }
+    
+    .artist-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .artwork-info {
+        padding: 25px 20px;
+    }
+    
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+}

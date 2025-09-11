@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestres Modernos - JC Arte & Capital</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/exhibition.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link active">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/artistas.html" class="nav-link">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/contato.html" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Exhibition Hero -->
+    <section class="exhibition-hero">
+        <div class="hero-background">
+            <div class="background-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="exhibition-info">
+                <span class="exhibition-category">Exposição Permanente</span>
+                <h1 class="exhibition-title">Mestres Modernos</h1>
+                <p class="exhibition-subtitle">
+                    Uma celebração dos grandes nomes que definiram o modernismo artístico, 
+                    reunindo obras icônicas de mestres que revolucionaram a arte do século XX.
+                </p>
+                <div class="exhibition-details">
+                    <div class="detail-item">
+                        <strong>Período:</strong>
+                        <span>Coleção Permanente</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Curadoria:</strong>
+                        <span>Dr. Roberto Mendes</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Obras:</strong>
+                        <span>18 peças</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Coleção</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="pintura">Pintura</button>
+                    <button class="filter-btn" data-filter="escultura">Escultura</button>
+                    <button class="filter-btn" data-filter="desenho">Desenho</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Artwork Items -->
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Composição em Azul</h3>
+                        <p class="artist-name">Alfredo Volpi</p>
+                        <p class="artwork-year">1958</p>
+                        <p class="artwork-medium">Têmpera sobre tela</p>
+                        <p class="artwork-dimensions">80 x 60 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Guerreiro</h3>
+                        <p class="artist-name">Bruno Giorgi</p>
+                        <p class="artwork-year">1955</p>
+                        <p class="artwork-medium">Bronze</p>
+                        <p class="artwork-dimensions">150 x 80 x 50 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Mulatas</h3>
+                        <p class="artist-name">Di Cavalcanti</p>
+                        <p class="artwork-year">1962</p>
+                        <p class="artwork-medium">Óleo sobre tela</p>
+                        <p class="artwork-dimensions">100 x 80 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="desenho">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Estudo para Retirantes</h3>
+                        <p class="artist-name">Candido Portinari</p>
+                        <p class="artwork-year">1944</p>
+                        <p class="artwork-medium">Desenho a carvão</p>
+                        <p class="artwork-dimensions">50 x 70 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Abaporu</h3>
+                        <p class="artist-name">Tarsila do Amaral</p>
+                        <p class="artwork-year">1928</p>
+                        <p class="artwork-medium">Óleo sobre tela</p>
+                        <p class="artwork-dimensions">85 x 73 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Unidade Tripartida</h3>
+                        <p class="artist-name">Max Bill</p>
+                        <p class="artwork-year">1948</p>
+                        <p class="artwork-medium">Granito</p>
+                        <p class="artwork-dimensions">120 x 120 x 30 cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition Description -->
+    <section class="exhibition-description">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-text">
+                    <h2>Sobre a Exposição</h2>
+                    <p>
+                        A exposição "Mestres Modernos" apresenta um panorama excepcional do modernismo 
+                        brasileiro e internacional, reunindo obras de artistas que transformaram 
+                        radicalmente a linguagem artística do século XX.
+                    </p>
+                    <p>
+                        Esta seleção inclui peças fundamentais de Tarsila do Amaral, Candido Portinari, 
+                        Di Cavalcanti, Alfredo Volpi, e outros mestres que definiram os rumos da arte moderna. 
+                        Cada obra representa não apenas um marco artístico, mas também um investimento 
+                        de valor histórico inestimável.
+                    </p>
+                    <p>
+                        A curadoria privilegia obras que demonstram a evolução estilística e conceitual 
+                        destes artistas, evidenciando como suas contribuições continuam a influenciar 
+                        e valorizar no mercado de arte contemporâneo.
+                    </p>
+                </div>
+                <div class="description-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">Obras</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Artistas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1928</span>
+                        <span class="stat-label">Obra mais antiga</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation to other exhibitions -->
+    <section class="other-exhibitions">
+        <div class="container">
+            <h2>Outras Exposições</h2>
+            <div class="other-exhibitions-grid">
+                <a href="arte-contemporanea.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Arte Contemporânea</h3>
+                        <p>Explorando as fronteiras da expressão artística atual</p>
+                    </div>
+                </a>
+                <a href="jovens-talentos.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Jovens Talentos</h3>
+                        <p>Descobrindo a próxima geração de artistas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/exhibition.js"></script>
+</body>
+</html>

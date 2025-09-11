@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Contemporânea - JC Arte & Capital</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/exhibition.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link active">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/artistas.html" class="nav-link">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/contato.html" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Exhibition Hero -->
+    <section class="exhibition-hero">
+        <div class="hero-background">
+            <div class="background-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="exhibition-info">
+                <span class="exhibition-category">Exposição Atual</span>
+                <h1 class="exhibition-title">Arte Contemporânea</h1>
+                <p class="exhibition-subtitle">
+                    Explorando as fronteiras da expressão artística atual através de obras que desafiam 
+                    convenções e redefinem os limites da criatividade.
+                </p>
+                <div class="exhibition-details">
+                    <div class="detail-item">
+                        <strong>Período:</strong>
+                        <span>15 Set - 30 Nov 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Curadoria:</strong>
+                        <span>Maria Silva & João Santos</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Obras:</strong>
+                        <span>24 peças</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Coleção</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="pintura">Pintura</button>
+                    <button class="filter-btn" data-filter="escultura">Escultura</button>
+                    <button class="filter-btn" data-filter="instalacao">Instalação</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Artwork Items -->
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Reflexões Urbanas</h3>
+                        <p class="artist-name">Ana Rodrigues</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Óleo sobre tela</p>
+                        <p class="artwork-dimensions">120 x 90 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Formas em Movimento</h3>
+                        <p class="artist-name">Carlos Mendoza</p>
+                        <p class="artwork-year">2023</p>
+                        <p class="artwork-medium">Bronze patinado</p>
+                        <p class="artwork-dimensions">180 x 60 x 40 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Abstração Digital</h3>
+                        <p class="artist-name">Beatriz Lima</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Acrílica sobre tela</p>
+                        <p class="artwork-dimensions">100 x 100 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="instalacao">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Luz e Sombra</h3>
+                        <p class="artist-name">Roberto Ferreira</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Instalação interativa</p>
+                        <p class="artwork-dimensions">Dimensões variáveis</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Paisagem Imaginária</h3>
+                        <p class="artist-name">Helena Costa</p>
+                        <p class="artwork-year">2023</p>
+                        <p class="artwork-medium">Técnica mista</p>
+                        <p class="artwork-dimensions">150 x 200 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Metamorfose</h3>
+                        <p class="artist-name">Diego Almeida</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Mármore e metal</p>
+                        <p class="artwork-dimensions">200 x 80 x 60 cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition Description -->
+    <section class="exhibition-description">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-text">
+                    <h2>Sobre a Exposição</h2>
+                    <p>
+                        A exposição "Arte Contemporânea" apresenta uma seleção cuidadosa de obras que 
+                        representam as tendências mais significativas da arte atual. Cada peça foi 
+                        escolhida por sua capacidade de dialogar com os desafios e questões do nosso tempo.
+                    </p>
+                    <p>
+                        Através de diferentes linguagens - pintura, escultura e instalação - os artistas 
+                        exploram temas como identidade, tecnologia, meio ambiente e sociedade, criando 
+                        um panorama rico e diversificado da produção artística contemporânea.
+                    </p>
+                    <p>
+                        Esta mostra não apenas celebra a criatividade individual, mas também demonstra 
+                        como a arte continua sendo um meio poderoso de reflexão e transformação social, 
+                        consolidando-se como um investimento cultural e financeiro de valor duradouro.
+                    </p>
+                </div>
+                <div class="description-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Obras</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Artistas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Linguagens</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation to other exhibitions -->
+    <section class="other-exhibitions">
+        <div class="container">
+            <h2>Outras Exposições</h2>
+            <div class="other-exhibitions-grid">
+                <a href="mestres-modernos.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mestres Modernos</h3>
+                        <p>Uma celebração dos grandes nomes do modernismo</p>
+                    </div>
+                </a>
+                <a href="jovens-talentos.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Jovens Talentos</h3>
+                        <p>Descobrindo a próxima geração de artistas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/exhibition.js"></script>
+</body>
+</html>

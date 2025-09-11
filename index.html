@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Arte & Capital - Jornada Cultural</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="exhibitions/arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="exhibitions/mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="exhibitions/jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/artistas.html" class="nav-link">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-icon">
+                    <img src="images/logos/icon_JC.png" alt="JC Icon" class="main-icon">
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Arte como</span>
+                    <span class="title-line accent">Capital</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Em uma era de capital volátil, a arte emerge como um refúgio. 
+                    Um porto seguro onde a beleza encontra o valor.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Explorar Coleção</button>
+                    <button class="btn btn-secondary">Nossa História</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="interactive-mosaic">
+                    <div class="mosaic-card" data-exhibition="arte-contemporanea">
+                        <div class="mosaic-preview">
+                            <div class="preview-tile tile-1"></div>
+                            <div class="preview-tile tile-2"></div>
+                            <div class="preview-tile tile-3"></div>
+                            <div class="preview-tile tile-4"></div>
+                        </div>
+                        <div class="mosaic-info">
+                            <h3>Exposição Atual</h3>
+                            <p>Arte Contemporânea</p>
+                            <span class="mosaic-cta">Ver Exposição →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Jornada Cultural</h2>
+                    <div class="text-blocks">
+                        <p class="text-block">
+                            Na <strong>JC Arte & Capital</strong>, enxergamos a arte como riqueza em sua expressão mais plena: 
+                            material por sua valorização constante, e cultural por transcender o efêmero.
+                        </p>
+                        <p class="text-block">
+                            Cada obra é mais do que forma e cor; é a memória cristalizada de um tempo, 
+                            um patrimônio que entrelaça, de forma única, a beleza ao valor.
+                        </p>
+                        <p class="text-block">
+                            Investir em arte é apostar na força do tempo. É compreender que a passagem dos anos 
+                            não corrói, mas consagra. Que a raridade se transforma em legado.
+                        </p>
+                        <p class="text-block accent-text">
+                            A arte é o capital em sua forma mais elevada, tocando a eternidade.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="logo-display">
+                        <img src="images/logos/logo_JC.jpeg" alt="JC Arte & Capital Logo" class="about-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibitions Preview -->
+    <section id="exposicoes" class="exhibitions">
+        <div class="container">
+            <h2 class="section-title center">Exposições</h2>
+            <div class="exhibitions-grid">
+                <div class="exhibition-card" data-expo="expo1">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Arte Contemporânea</h3>
+                        <p>Explorando as fronteiras da expressão artística atual</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+                <div class="exhibition-card" data-expo="expo2">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mestres Modernos</h3>
+                        <p>Uma celebração dos grandes nomes do modernismo</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+                <div class="exhibition-card" data-expo="expo3">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Jovens Talentos</h3>
+                        <p>Descobrindo a próxima geração de artistas</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p>Conecte-se conosco para descobrir como a arte pode transformar seu patrimônio em legado.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <strong>Email</strong>
+                                <a href="mailto:contato@jcartecapital.com.br">contato@jcartecapital.com.br</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📱</div>
+                            <div class="method-content">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/5511945821763" target="_blank">(11) 94582-1763</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-content">
+                                <strong>Localização</strong>
+                                <span>Jardins, São Paulo - SP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <a href="pages/contato.html" class="btn btn-secondary">
+                            <span>Ver Todas as Informações</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Envie uma Mensagem Rápida</h3>
+                    <form class="quick-contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Como podemos ajudá-lo com arte e investimentos?" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span>Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

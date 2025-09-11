@@ -1,0 +1,644 @@
+/* Curator Page Specific Styles */
+
+:root {
+    --primary-navy: #1f2958;
+    --primary-light: #c7c8c9;
+    --accent-cyan: #26bbbe;
+    --accent-red: #aa2221;
+    --accent-pink: #bc6f71;
+    --text-light: #cecfd0;
+    --text-dark: #333;
+    --background-light: #fafafa;
+}
+
+/* Curator Hero */
+.curator-hero {
+    padding: 140px 0 100px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.curator-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    background-image: url('../images/logos/logo_JC.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    z-index: 1;
+    border-radius: 40px;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    position: relative;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+    box-shadow: var(--shadow-medium);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 40px;
+    color: var(--white);
+}
+
+.floating-quote {
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: floatUp 1s ease 1s forwards;
+}
+
+.hero-category {
+    display: inline-block;
+    background: var(--accent-cyan);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.curator-hero h1 {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.highlight-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.highlight-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Biography Section */
+.biography {
+    padding: 100px 0;
+}
+
+.biography-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.biography-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.biography-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-gold);
+    border-radius: 2px;
+}
+
+.bio-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bio-paragraphs p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.bio-paragraphs p strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Biography Sidebar */
+.biography-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.credentials,
+.awards {
+    background: var(--primary-light);
+    padding: 32px;
+    border-radius: 16px;
+}
+
+.credentials h3,
+.awards h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.credential-item,
+.award-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.credential-item:last-child,
+.award-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.credential-item strong,
+.award-item strong {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.credential-item span,
+.award-item span {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 100px 0;
+    background: var(--primary-light);
+}
+
+.philosophy-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 60px;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.philosophy-card {
+    background: var(--white);
+    padding: 40px 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.philosophy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    filter: grayscale(1);
+    transition: var(--transition-fast);
+}
+
+.philosophy-card:hover .card-icon {
+    filter: grayscale(0);
+}
+
+.philosophy-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.philosophy-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Notable Exhibitions */
+.notable-exhibitions {
+    padding: 100px 0;
+}
+
+.notable-exhibitions h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 60px;
+}
+
+.exhibitions-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exhibitions-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-gold);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    text-align: right;
+}
+
+.timeline-year {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1.125rem;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 0 40px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    margin: 0 20px;
+    padding: 32px;
+    transition: var(--transition-smooth);
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-medium);
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.timeline-venue {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-gold);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Publications */
+.publications {
+    padding: 100px 0;
+    background: var(--primary-light);
+}
+
+.publications h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 60px;
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.publication-item {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.publication-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.publication-type {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.publication-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.publication-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.publication-year {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 100px 0;
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.curator-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.curator-quote::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: var(--primary-gold);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.curator-quote p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.curator-quote cite {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-gold);
+    font-style: normal;
+}
+
+.curator-quote cite::before {
+    content: '— ';
+}
+
+/* Contact Curator */
+.contact-curator {
+    padding: 100px 0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 40px;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.contact-text p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes floatUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-image {
+        height: 400px;
+        order: -1;
+    }
+    
+    .hero-highlights {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .biography-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .timeline-item .timeline-content {
+        text-align: center !important;
+        margin: 20px 0 0 0;
+    }
+    
+    .exhibitions-timeline::before {
+        display: none;
+    }
+    
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .curator-quote p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curator-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .highlight-item {
+        padding: 16px;
+    }
+    
+    .highlight-number {
+        font-size: 1.5rem;
+    }
+    
+    .philosophy-card {
+        padding: 32px 24px;
+    }
+    
+    .timeline-content {
+        padding: 24px;
+    }
+    
+    .publication-item {
+        padding: 24px;
+    }
+    
+    .curator-quote::before {
+        font-size: 6rem;
+        top: -30px;
+    }
+}

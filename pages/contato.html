@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - JC Arte & Capital</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="contact-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="../exhibitions/arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="../exhibitions/mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="../exhibitions/jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/artistas.html" class="nav-link">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html" class="nav-link active">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Entre em Contato</h1>
+                <p>Conecte-se conosco para descobrir como a arte pode transformar seu patrimônio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Envie uma Mensagem</h2>
+                    <p>Nossa equipe de especialistas está pronta para atendê-lo. Preencha o formulário abaixo e receba uma resposta personalizada em até 4 horas úteis.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nome</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Sobrenome</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="investment">Oportunidades de Investimento</option>
+                                <option value="artwork">Informações sobre Obras</option>
+                                <option value="exhibition">Agendamento de Visita</option>
+                                <option value="partnership">Parcerias</option>
+                                <option value="other">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" 
+                                placeholder="Descreva seu interesse em arte como investimento, obras específicas ou oportunidades de consultoria. Nossa equipe especializada entrará em contato para uma conversa personalizada." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Enviar Mensagem</span>
+                            <span class="btn-loader">Enviando...</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <h2>Informações de Contato</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <h3>Email</h3>
+                                <a href="mailto:contato@jcartecapital.com.br">contato@jcartecapital.com.br</a>
+                                <a href="mailto:edson.cardoso@jcartecapital.com.br">edson.cardoso@jcartecapital.com.br</a>
+                                <span class="method-note">Resposta em até 4 horas úteis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📱</div>
+                            <div class="method-content">
+                                <h3>Telefone & WhatsApp</h3>
+                                <a href="tel:+5511945821763">+55 (11) 94582-1763</a>
+                                <a href="https://wa.me/5511945821763" target="_blank">WhatsApp: (11) 94582-1763</a>
+                                <span class="method-note">Segunda a Sexta, 9h às 18h</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-content">
+                                <h3>Galeria & Escritório</h3>
+                                <address>
+                                    Rua Augusta, 2497 - Conjunto 83<br>
+                                    Jardins, São Paulo - SP<br>
+                                    CEP: 01413-100
+                                </address>
+                                <span class="method-note">Visitação mediante agendamento</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🕒</div>
+                            <div class="method-content">
+                                <h3>Atendimento</h3>
+                                <div class="hours">
+                                    <span><strong>Consultoria:</strong> Segunda a Sexta, 9h às 18h</span>
+                                    <span><strong>Galeria:</strong> Terça a Sábado, 10h às 19h</span>
+                                    <span><strong>Visitação privada:</strong> Mediante agendamento</span>
+                                    <span class="closed">Domingos e feriados: Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Siga-nos nas Redes Sociais</h2>
+            <p>Acompanhe nossas novidades, exposições e oportunidades de investimento</p>
+            
+            <div class="social-grid">
+                <a href="https://instagram.com/jc.artecapital" target="_blank" class="social-card instagram">
+                    <div class="social-icon">📷</div>
+                    <div class="social-content">
+                        <h3>Instagram</h3>
+                        <p>@jc.artecapital</p>
+                        <span class="social-desc">45.2K seguidores • Obras exclusivas e bastidores</span>
+                    </div>
+                </a>
+                
+                <a href="https://linkedin.com/company/jc-arte-capital" target="_blank" class="social-card linkedin">
+                    <div class="social-icon">💼</div>
+                    <div class="social-content">
+                        <h3>LinkedIn</h3>
+                        <p>JC Arte & Capital</p>
+                        <span class="social-desc">12.8K conexões • Análises de mercado e investimentos</span>
+                    </div>
+                </a>
+                
+                <a href="https://wa.me/5511945821763" target="_blank" class="social-card whatsapp">
+                    <div class="social-icon">�</div>
+                    <div class="social-content">
+                        <h3>WhatsApp</h3>
+                        <p>(11) 94582-1763</p>
+                        <span class="social-desc">Atendimento direto • Segunda a Sexta, 9h às 18h</span>
+                    </div>
+                </a>
+                
+                <a href="https://youtube.com/@jcartecapital" target="_blank" class="social-card youtube">
+                    <div class="social-icon">🎥</div>
+                    <div class="social-content">
+                        <h3>YouTube</h3>
+                        <p>JC Arte & Capital</p>
+                        <span class="social-desc">8.3K inscritos • Tours e entrevistas exclusivas</span>
+                    </div>
+                </a>
+                
+                <a href="https://twitter.com/jcartecapital" target="_blank" class="social-card twitter">
+                    <div class="social-icon">🐦</div>
+                    <div class="social-content">
+                        <h3>Twitter</h3>
+                        <p>@jcartecapital</p>
+                        <span class="social-desc">Atualizações rápidas e tendências do mercado</span>
+                    </div>
+                </a>
+                
+                <a href="https://tiktok.com/@jcartecapital" target="_blank" class="social-card tiktok">
+                    <div class="social-icon">🎵</div>
+                    <div class="social-content">
+                        <h3>TikTok</h3>
+                        <p>@jcartecapital</p>
+                        <span class="social-desc">Arte de forma descontraída e acessível</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/contact.js"></script>
+</body>
+</html>

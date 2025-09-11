@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas - JC Arte & Capital</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/artists.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="../exhibitions/arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="../exhibitions/mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="../exhibitions/jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="artistas.html" class="nav-link active">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Nossos Artistas</h1>
+                    <p class="hero-subtitle">Conheça os talentos que compõem nossa galeria, desde mestres consagrados até jovens promessas do cenário artístico contemporâneo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Categories -->
+        <section class="artists-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="pintores">Pintores</button>
+                    <button class="filter-btn" data-category="fotografos">Fotógrafos</button>
+                    <button class="filter-btn" data-category="escultores">Escultores</button>
+                </div>
+
+                <!-- Pintores -->
+                <div class="category-section" data-category="pintores">
+                    <h2 class="category-title">Pintores</h2>
+                    <div class="artists-grid">
+                        <div class="artist-card" data-artist="leonardo-silva">
+                            <div class="artist-image">
+                                <div class="placeholder-image">LS</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Leonardo Silva</h3>
+                                <p class="artist-style">Expressionismo Contemporâneo</p>
+                                <p class="artist-description">Conhecido por suas telas vibrantes que exploram a condição humana moderna.</p>
+                                <div class="artist-stats">
+                                    <span>12 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1985</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="mariana-costa">
+                            <div class="artist-image">
+                                <div class="placeholder-image">MC</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Mariana Costa</h3>
+                                <p class="artist-style">Realismo Fantástico</p>
+                                <p class="artist-description">Suas pinturas combinam técnica clássica com narrativas oníricas.</p>
+                                <div class="artist-stats">
+                                    <span>8 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascida em 1978</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="roberto-mendes">
+                            <div class="artist-image">
+                                <div class="placeholder-image">RM</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Roberto Mendes</h3>
+                                <p class="artist-style">Abstracionismo Lírico</p>
+                                <p class="artist-description">Mestre em composições abstratas que evocam paisagens emocionais.</p>
+                                <div class="artist-stats">
+                                    <span>15 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1970</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="ana-beatriz">
+                            <div class="artist-image">
+                                <div class="placeholder-image">AB</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Ana Beatriz Santos</h3>
+                                <p class="artist-style">Neo-Figurativismo</p>
+                                <p class="artist-description">Jovem talento que reinterpreta a figura humana com técnicas inovadoras.</p>
+                                <div class="artist-stats">
+                                    <span>6 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascida em 1995</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotógrafos -->
+                <div class="category-section" data-category="fotografos">
+                    <h2 class="category-title">Fotógrafos</h2>
+                    <div class="artists-grid">
+                        <div class="artist-card" data-artist="carlos-urbano">
+                            <div class="artist-image">
+                                <div class="placeholder-image">CU</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Carlos Urbano</h3>
+                                <p class="artist-style">Fotografia Urbana Conceitual</p>
+                                <p class="artist-description">Documenta a metrópole através de um olhar poético e crítico.</p>
+                                <div class="artist-stats">
+                                    <span>20 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1982</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="patricia-luz">
+                            <div class="artist-image">
+                                <div class="placeholder-image">PL</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Patrícia Luz</h3>
+                                <p class="artist-style">Fotografia de Natureza Íntima</p>
+                                <p class="artist-description">Explora a relação entre luz e forma em composições minimalistas.</p>
+                                <div class="artist-stats">
+                                    <span>14 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascida em 1987</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="jose-retrato">
+                            <div class="artist-image">
+                                <div class="placeholder-image">JR</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>José Retrato</h3>
+                                <p class="artist-style">Retrato Contemporâneo</p>
+                                <p class="artist-description">Reconhecido internacionalmente por seus retratos que capturam a essência humana.</p>
+                                <div class="artist-stats">
+                                    <span>18 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1975</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escultores -->
+                <div class="category-section" data-category="escultores">
+                    <h2 class="category-title">Escultores</h2>
+                    <div class="artists-grid">
+                        <div class="artist-card" data-artist="marcos-ferro">
+                            <div class="artist-image">
+                                <div class="placeholder-image">MF</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Marcos Ferro</h3>
+                                <p class="artist-style">Escultura em Metal Contemporânea</p>
+                                <p class="artist-description">Trabalha com metais reciclados criando formas orgânicas monumentais.</p>
+                                <div class="artist-stats">
+                                    <span>7 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1968</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="lucia-ceramica">
+                            <div class="artist-image">
+                                <div class="placeholder-image">LC</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Lúcia Cerâmica</h3>
+                                <p class="artist-style">Cerâmica Artística Contemporânea</p>
+                                <p class="artist-description">Pioneira em técnicas de cerâmica que desafiam os limites do material.</p>
+                                <div class="artist-stats">
+                                    <span>11 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascida em 1973</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="pedro-madeira">
+                            <div class="artist-image">
+                                <div class="placeholder-image">PM</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Pedro Madeira</h3>
+                                <p class="artist-style">Escultura em Madeira Sustentável</p>
+                                <p class="artist-description">Cria esculturas expressivas usando apenas madeira de reflorestamento.</p>
+                                <div class="artist-stats">
+                                    <span>9 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascido em 1990</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist-card" data-artist="helena-bronze">
+                            <div class="artist-image">
+                                <div class="placeholder-image">HB</div>
+                            </div>
+                            <div class="artist-info">
+                                <h3>Helena Bronze</h3>
+                                <p class="artist-style">Escultura Clássica Moderna</p>
+                                <p class="artist-description">Combina técnicas tradicionais do bronze com formas contemporâneas.</p>
+                                <div class="artist-stats">
+                                    <span>5 obras na galeria</span>
+                                    <span>•</span>
+                                    <span>Nascida em 1981</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/artists.js"></script>
+</body>
+</html>

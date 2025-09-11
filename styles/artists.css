@@ -1,0 +1,309 @@
+/* Artists Page Specific Styles */
+
+:root {
+    --primary-navy: #1f2958;
+    --primary-light: #c7c8c9;
+    --accent-cyan: #26bbbe;
+    --accent-red: #aa2221;
+    --accent-pink: #bc6f71;
+    --text-light: #cecfd0;
+    --text-dark: #333;
+    --background-light: #fafafa;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-cyan) 100%);
+    color: var(--white);
+    padding: 160px 0 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background-image: url('../images/logos/logo_JC.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    z-index: 1;
+    border-radius: 50px;
+    filter: blur(1px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Category Filters */
+.artists-categories {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 32px;
+    border: 2px solid var(--border-light);
+    background: var(--white);
+    color: var(--text-primary);
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--accent-cyan);
+    background: var(--accent-cyan);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Category Sections */
+.category-section {
+    margin-bottom: 80px;
+    opacity: 1;
+    transition: var(--transition-smooth);
+}
+
+.category-section.hidden {
+    display: none;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    border-radius: 2px;
+}
+
+/* Artists Grid */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artist-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    position: relative;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.artist-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.artist-card:hover::before {
+    opacity: 1;
+}
+
+.artist-image {
+    height: 250px;
+    background: linear-gradient(135deg, var(--primary-light), var(--text-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-image {
+    width: 100px;
+    height: 100px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-medium);
+}
+
+.artist-info {
+    padding: 32px 28px;
+}
+
+.artist-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.artist-style {
+    color: var(--accent-cyan);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.artist-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.artist-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.artist-stats span:nth-child(2) {
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+
+/* Animations */
+.artist-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.artist-card:nth-child(1) { animation-delay: 0.1s; }
+.artist-card:nth-child(2) { animation-delay: 0.2s; }
+.artist-card:nth-child(3) { animation-delay: 0.3s; }
+.artist-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 140px 0 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .artists-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .category-filters {
+        gap: 12px;
+    }
+    
+    .filter-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .category-title {
+        font-size: 2rem;
+    }
+    
+    .hero::before {
+        width: 400px;
+        height: 400px;
+        right: -100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .artist-info {
+        padding: 24px 20px;
+    }
+    
+    .category-filters {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        min-width: 100px;
+    }
+}

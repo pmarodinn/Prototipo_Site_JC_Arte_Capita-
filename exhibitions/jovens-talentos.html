@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovens Talentos - JC Arte & Capital</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/exhibition.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                <div class="nav-logo-text">
+                    <span class="nav-title">JC Arte & Capital</span>
+                    <hr class="nav-divider">
+                    <span class="nav-subtitle">Jornada Cultural</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#exposicoes" class="nav-link active">Exposições</a>
+                    <div class="dropdown-menu">
+                        <a href="arte-contemporanea.html" class="dropdown-item">Arte Contemporânea</a>
+                        <a href="mestres-modernos.html" class="dropdown-item">Mestres Modernos</a>
+                        <a href="jovens-talentos.html" class="dropdown-item">Jovens Talentos</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/edson-cardoso.html" class="nav-link">Curador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/artistas.html" class="nav-link">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/contato.html" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Exhibition Hero -->
+    <section class="exhibition-hero">
+        <div class="hero-background">
+            <div class="background-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="exhibition-info">
+                <span class="exhibition-category">Exposição Temporária</span>
+                <h1 class="exhibition-title">Jovens Talentos</h1>
+                <p class="exhibition-subtitle">
+                    Descobrindo e promovendo a próxima geração de artistas visionários, 
+                    cujas obras representam o futuro promissor da arte contemporânea.
+                </p>
+                <div class="exhibition-details">
+                    <div class="detail-item">
+                        <strong>Período:</strong>
+                        <span>1 Out - 15 Dez 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Curadoria:</strong>
+                        <span>Giovana Ribeiro</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Obras:</strong>
+                        <span>30 peças</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Coleção</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="pintura">Pintura</button>
+                    <button class="filter-btn" data-filter="fotografia">Fotografia</button>
+                    <button class="filter-btn" data-filter="instalacao">Instalação</button>
+                    <button class="filter-btn" data-filter="escultura">Escultura</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Artwork Items -->
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Horizontes Digitais</h3>
+                        <p class="artist-name">Marina Santos</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Acrílica e mídia digital</p>
+                        <p class="artwork-dimensions">120 x 90 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="fotografia">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Identidade Urbana</h3>
+                        <p class="artist-name">Júlio César</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Fotografia digital</p>
+                        <p class="artwork-dimensions">100 x 70 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Fragmentos do Tempo</h3>
+                        <p class="artist-name">Lucas Oliveira</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Resina e metal</p>
+                        <p class="artwork-dimensions">80 x 60 x 40 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="instalacao">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Ecos do Futuro</h3>
+                        <p class="artist-name">Camila Torres</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Instalação interativa</p>
+                        <p class="artwork-dimensions">Dimensões variáveis</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Natureza Sintética</h3>
+                        <p class="artist-name">Pedro Henrique</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Óleo sobre tela</p>
+                        <p class="artwork-dimensions">110 x 80 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="fotografia">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Reflexões Contemporâneas</h3>
+                        <p class="artist-name">Sofia Martins</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Fotografia analógica</p>
+                        <p class="artwork-dimensions">90 x 60 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="pintura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Abstração Molecular</h3>
+                        <p class="artist-name">Rafael Cunha</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Acrílica sobre madeira</p>
+                        <p class="artwork-dimensions">95 x 95 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-item" data-category="escultura">
+                    <div class="artwork-image">
+                        <div class="image-placeholder"></div>
+                        <div class="artwork-overlay">
+                            <button class="view-btn">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Movimento Perpétuo</h3>
+                        <p class="artist-name">Ana Beatriz</p>
+                        <p class="artwork-year">2024</p>
+                        <p class="artwork-medium">Alumínio e vidro</p>
+                        <p class="artwork-dimensions">120 x 50 x 30 cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition Description -->
+    <section class="exhibition-description">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-text">
+                    <h2>Sobre a Exposição</h2>
+                    <p>
+                        A exposição "Jovens Talentos" apresenta uma seleção criteriosa de obras de 
+                        artistas emergentes que estão redefinindo os paradigmas da arte contemporânea. 
+                        Cada peça representa não apenas talento excepcional, mas também o potencial 
+                        de valorização significativa no mercado de arte.
+                    </p>
+                    <p>
+                        Estes jovens artistas, com idades entre 22 e 35 anos, já demonstram maturidade 
+                        conceitual e domínio técnico que os posicionam como investimentos promissores 
+                        para colecionadores visionários. Suas obras dialogam com questões urgentes da 
+                        contemporaneidade através de linguagens inovadoras.
+                    </p>
+                    <p>
+                        A curadoria privilegiou artistas que já possuem reconhecimento em salões e 
+                        mostras importantes, indicando trajetórias ascendentes e potencial de consolidação 
+                        no cenário artístico nacional e internacional.
+                    </p>
+                </div>
+                <div class="description-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">30</span>
+                        <span class="stat-label">Obras</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Artistas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">28</span>
+                        <span class="stat-label">Idade média</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation to other exhibitions -->
+    <section class="other-exhibitions">
+        <div class="container">
+            <h2>Outras Exposições</h2>
+            <div class="other-exhibitions-grid">
+                <a href="arte-contemporanea.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Arte Contemporânea</h3>
+                        <p>Explorando as fronteiras da expressão artística atual</p>
+                    </div>
+                </a>
+                <a href="mestres-modernos.html" class="other-exhibition-card">
+                    <div class="card-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mestres Modernos</h3>
+                        <p>Uma celebração dos grandes nomes do modernismo</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+                    <span>JC Arte & Capital</span>
+                </div>
+                <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/exhibition.js"></script>
+</body>
+</html>
