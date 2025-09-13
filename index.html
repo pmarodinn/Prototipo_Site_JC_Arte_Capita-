@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JC Arte & Capital - Jornada Cultural</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css?v=20250914a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fallback JS para garantir carregamento das imagens das tiles mesmo com cache antigo -->
+    <script>
+      window.addEventListener('load', () => {
+        const map = {1:'1.jpeg',2:'2.jpeg',3:'3.jpeg',4:'4.jpeg'};
+        Object.keys(map).forEach(k => {
+          const el = document.querySelector('.tile-'+k);
+          if(!el) return;
+          const bg = getComputedStyle(el).backgroundImage;
+          if(!bg || bg === 'none' || bg.includes('gradient')) {
+            el.style.backgroundImage = `url(images/exposicoes/jockey1/14deset/${map[k]})`;
+            el.style.backgroundSize = 'cover';
+            el.style.backgroundPosition = 'center';
+            el.style.backgroundRepeat = 'no-repeat';
+          }
+        });
+      });
+    </script>
 </head>
 <body>
     <!-- Navigation -->

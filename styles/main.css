@@ -472,20 +472,20 @@ body {
 
 /* Tiles agora usam fotografias da exposição Jockey Club */
 .tile-1 { 
-    background-image: url('../images/exposicoes/jockey1/14deset/1.jpeg');
+    background-image: url('images/exposicoes/jockey1/14deset/1.jpeg');
     /* fallback gradient sutil */
     background-color: var(--primary-light);
 }
 .tile-2 { 
-    background-image: url('../images/exposicoes/jockey1/14deset/2.jpeg');
+    background-image: url('images/exposicoes/jockey1/14deset/2.jpeg');
     background-color: var(--primary-light);
 }
 .tile-3 { 
-    background-image: url('../images/exposicoes/jockey1/14deset/3.jpeg');
+    background-image: url('images/exposicoes/jockey1/14deset/3.jpeg');
     background-color: var(--primary-light);
 }
 .tile-4 { 
-    background-image: url('../images/exposicoes/jockey1/14deset/4.jpeg');
+    background-image: url('images/exposicoes/jockey1/14deset/4.jpeg');
     background-color: var(--primary-light);
 }
 
