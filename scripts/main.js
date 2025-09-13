@@ -173,10 +173,8 @@ class JCWebsite {
     openExhibition(expoId) {
         // Navigate to exhibition page
         const exhibitions = {
-            'expo1': 'exhibitions/arte-contemporanea.html',
-            'expo2': 'exhibitions/mestres-modernos.html',
-            'expo3': 'exhibitions/jovens-talentos.html',
-            'expo4': 'exhibitions/jockey-clube.html'
+            'expo1': 'exhibitions/jockey-clube.html',
+            'expo2': 'exhibitions/exposicao-exemplo.html'
         };
         
         if (exhibitions[expoId]) {
