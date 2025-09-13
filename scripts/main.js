@@ -20,6 +20,14 @@ class JCWebsite {
         const navbar = document.querySelector('.navbar');
         const navLinks = document.querySelectorAll('.nav-link');
 
+        // Inject scroll progress bar
+        if (!navbar.querySelector('.scroll-progress')) {
+            const bar = document.createElement('div');
+            bar.className = 'scroll-progress';
+            navbar.appendChild(bar);
+        }
+        const progressBar = navbar.querySelector('.scroll-progress');
+
         // Smooth scrolling for navigation links
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -28,36 +36,28 @@ class JCWebsite {
                     e.preventDefault();
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Update active navigation
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         navLinks.forEach(l => l.classList.remove('active'));
                         link.classList.add('active');
                     }
                 }
-                // For external links (pages/), let them navigate normally
             });
         });
 
-        // Active navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const scrollY = window.pageYOffset;
-            
-            // Navbar background opacity
-            if (scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
+        const updateProgress = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+            progressBar.style.transform = `scaleX(${progress})`;
+        };
 
-            // Update active navigation link
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+            updateProgress();
             this.updateActiveNavigation();
         });
+
+        updateProgress();
     }
 
     updateActiveNavigation() {

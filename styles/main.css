@@ -67,11 +67,52 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-light);
     z-index: 1000;
-    transition: var(--transition-fast);
+    transition: background-color 0.4s ease, backdrop-filter 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(140deg, rgba(38,187,190,0.18), rgba(188,111,113,0.15) 45%, rgba(255,255,255,0.25) 90%);
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: opacity 0.8s ease;
+}
+
+.navbar.scrolled {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.52) 65%) ,
+        radial-gradient(at 25% 120%, rgba(38,187,190,0.35), transparent 70%),
+        radial-gradient(at 95% -10%, rgba(172,34,33,0.28), transparent 70%);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: 0 10px 40px -10px rgba(31,41,88,0.25), 0 2px 6px rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.navbar.scrolled::before { opacity: .55; }
+
+/* Scroll progress bar */
+.navbar .scroll-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink), var(--accent-red));
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: transform .25s ease-out;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    filter: drop-shadow(0 0 4px rgba(38,187,190,0.4));
 }
 
 .nav-container {
