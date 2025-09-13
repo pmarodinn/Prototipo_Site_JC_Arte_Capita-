@@ -175,7 +175,8 @@ class JCWebsite {
         const exhibitions = {
             'expo1': 'exhibitions/arte-contemporanea.html',
             'expo2': 'exhibitions/mestres-modernos.html',
-            'expo3': 'exhibitions/jovens-talentos.html'
+            'expo3': 'exhibitions/jovens-talentos.html',
+            'expo4': 'exhibitions/jockey-clube.html'
         };
         
         if (exhibitions[expoId]) {
