@@ -152,7 +152,7 @@ class ContactPage {
     async submitForm(formData) {
         // Send to FormSubmit service
         try {
-            const response = await fetch('https://formsubmit.co/edson@jcartecapital.com.br', {
+            const response = await fetch('https://formsubmit.co/contato@jcartecapital.com.br', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
