@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipping & Imprensa - JC Arte & Capital</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .clipping-hero {padding:140px 0 80px; background:linear-gradient(135deg,var(--primary-light),var(--white)); position:relative; overflow:hidden;}
+    .clipping-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(38,187,190,.25),transparent 60%);}    
+    .clipping-hero h1{font-size:clamp(2.8rem,6vw,4rem);line-height:1.1;margin-bottom:24px;}
+    .clipping-hero p{max-width:720px;font-size:1.15rem;color:var(--text-secondary);}    
+    .press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;margin-top:60px;}
+    .press-card{background:var(--white);border:1px solid var(--border-light);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-soft);position:relative;overflow:hidden;transition:var(--transition-smooth);}   
+    .press-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-medium);} 
+    .press-source{display:flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent-cyan);font-weight:600;}
+    .press-title{font-size:1.15rem;font-weight:600;line-height:1.35;color:var(--text-primary);}
+    .press-excerpt{font-size:.95rem;line-height:1.55;color:var(--text-secondary);flex:1;}
+    .press-meta{display:flex;align-items:center;gap:12px;font-size:.75rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.5px;}
+    .tag{background:var(--accent-cyan);color:#fff;padding:4px 10px;border-radius:12px;font-size:.65rem;font-weight:600;letter-spacing:.5px;}
+    .quote-mark{position:absolute;top:18px;right:18px;font-size:54px;line-height:1;color:var(--accent-cyan);opacity:.15;font-family:serif;}
+    .awards-section{margin-top:120px;}
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-top:48px;}
+    .award-card{background:linear-gradient(145deg,var(--white),#f4f6f7);border:1px solid var(--border-light);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;box-shadow:0 8px 30px -10px rgba(0,0,0,.08);transition:var(--transition-fast);} 
+    .award-card:hover{transform:translateY(-4px);}
+    .award-badge{width:48px;height:48px;background:var(--accent-cyan);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;border-radius:14px;font-size:.9rem;box-shadow:0 4px 14px rgba(38,187,190,.4);} 
+    .award-title{font-weight:600;font-size:1rem;color:var(--text-primary);} 
+    .award-org{font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:var(--text-light);font-weight:600;} 
+    .award-desc{font-size:.85rem;line-height:1.5;color:var(--text-secondary);} 
+    .timeline{margin-top:90px;padding-left:12px;border-left:3px solid var(--accent-cyan);display:flex;flex-direction:column;gap:42px;}
+    .timeline-item{position:relative;padding-left:28px;}
+    .timeline-item::before{content:'';position:absolute;left:-14px;top:4px;width:18px;height:18px;background:var(--accent-cyan);border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 4px rgba(38,187,190,.25);} 
+    .timeline-item h4{margin:0 0 6px;font-size:1rem;color:var(--text-primary);} 
+    .timeline-item p{margin:0;font-size:.9rem;color:var(--text-secondary);} 
+    .filters-bar{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;} 
+    .filter-chip{background:rgba(38,187,190,.12);color:var(--accent-cyan);border:none;padding:8px 18px;border-radius:20px;font-size:.75rem;font-weight:600;cursor:pointer;letter-spacing:.5px;transition:var(--transition-fast);} 
+    .filter-chip.active,.filter-chip:hover{background:var(--accent-cyan);color:#fff;} 
+    @media(max-width:720px){.press-grid{gap:28px;} .clipping-hero{padding:120px 0 60px;} }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+        <div class="nav-logo-text">
+          <span class="nav-title">JC Arte & Capital</span>
+          <hr class="nav-divider">
+          <span class="nav-subtitle">Jornada Cultural</span>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item dropdown">
+          <a href="#exposicoes" class="nav-link">Exposições</a>
+          <div class="dropdown-menu">
+            <a href="../exhibitions/jockey-clube.html" class="dropdown-item">Jockey Club</a>
+            <a href="../exhibitions/exposicao-exemplo.html" class="dropdown-item">Exposição Exemplo</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="artistas.html" class="nav-link">Artistas</a></li>
+        <li class="nav-item"><a href="icela.html" class="nav-link">ICELA</a></li>
+        <li class="nav-item"><a href="representacao.html" class="nav-link">Representação</a></li>
+        <li class="nav-item"><a href="clipping.html" class="nav-link active">Clipping</a></li>
+        <li class="nav-item"><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+        <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="clipping-hero">
+      <div class="container">
+        <h1>Clipping & Imprensa</h1>
+        <p>Seleção curada de menções na mídia, destaques editoriais e reconhecimentos públicos relacionados à atuação da JC Arte & Capital em exposições, premiações e iniciativas culturais.</p>
+        <div class="filters-bar" id="clipping-filters">
+          <button class="filter-chip active" data-filter="all">Tudo</button>
+          <button class="filter-chip" data-filter="midia">Mídia</button>
+          <button class="filter-chip" data-filter="premio">Prêmios</button>
+          <button class="filter-chip" data-filter="exposicao">Exposições</button>
+          <button class="filter-chip" data-filter="institucional">Institucional</button>
+        </div>
+
+        <div class="press-grid" id="press-grid">
+          <!-- Cards mock -->
+          <article class="press-card" data-category="midia exposicao">
+            <div class="quote-mark">“</div>
+            <div class="press-source">Revista ARTE+ • 2025</div>
+            <h3 class="press-title">“A JC consolida um modelo híbrido onde curadoria estratégica encontra valorização patrimonial.”</h3>
+            <p class="press-excerpt">Reportagem de capa analisando o posicionamento de galeria-boutique e a construção de valor de longo prazo através de registros institucionais consistentes.</p>
+            <div class="press-meta"><span class="tag">DESTAQUE</span><span>edição Maio/2025</span></div>
+          </article>
+
+          <article class="press-card" data-category="premio institucional">
+            <div class="quote-mark">“</div>
+            <div class="press-source">Prêmio Cultura Viva • 2025</div>
+            <h3 class="press-title">“Reconhecimento pela contribuição à articulação entre educação patrimonial e mercado de arte.”</h3>
+            <p class="press-excerpt">Menção honrosa em premiação nacional destacando iniciativas formativas em processo de implantação junto a parceiros institucionais.</p>
+            <div class="press-meta"><span class="tag">PRÊMIO</span><span>categoria Iniciativa Emergente</span></div>
+          </article>
+
+          <article class="press-card" data-category="midia institucional">
+            <div class="quote-mark">“</div>
+            <div class="press-source">Portal InvestMais • 2025</div>
+            <h3 class="press-title">“Arte como reserva de valor: a leitura financeira adotada pela JC Arte & Capital.”</h3>
+            <p class="press-excerpt">Entrevista abordando a tese da arte enquanto componente estratégico de portfólios diversificados e curadoria como mitigação de risco narrativo.</p>
+            <div class="press-meta"><span class="tag">ENTREVISTA</span><span>Publicado Jul/2025</span></div>
+          </article>
+
+          <article class="press-card" data-category="exposicao midia">
+            <div class="quote-mark">“</div>
+            <div class="press-source">Jornal Diário SP • 2025</div>
+            <h3 class="press-title">“Registro fotográfico do Jockey reforça a dimensão espacial da proposta.”</h3>
+            <p class="press-excerpt">Coluna cultural destacando metodologia documental e consistência visual na apresentação institucional.</p>
+            <div class="press-meta"><span class="tag">NOTA</span><span>Caderno 2</span></div>
+          </article>
+        </div>
+
+        <div class="awards-section">
+          <h2>Reconhecimentos & Prêmios</h2>
+          <div class="awards-grid">
+            <div class="award-card" data-category="premio">
+              <div class="award-badge">2025</div>
+              <div class="award-title">Menção Cultura Viva</div>
+              <div class="award-org">Instituto Cultura Viva</div>
+              <p class="award-desc">Reconhecimento preliminar por perspectiva inovadora de registro e difusão curatorial.</p>
+            </div>
+            <div class="award-card" data-category="premio">
+              <div class="award-badge">2025</div>
+              <div class="award-title">Shortlist Programa Inovação Patrimonial</div>
+              <div class="award-org">Rede Arte & Valor</div>
+              <p class="award-desc">Projeto inscrito citado em shortlist por potencial de escalabilidade educacional.</p>
+            </div>
+            <div class="award-card" data-category="institucional">
+              <div class="award-badge">2024</div>
+              <div class="award-title">Selo Boas Práticas Emergentes</div>
+              <div class="award-org">Observatório de Espaços Independentes</div>
+              <p class="award-desc">Reconhecimento simbólico a iniciativas em fase de estruturação estratégica.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-category="institucional">
+            <h4>Jul 2025 • Estruturação do Clipping</h4>
+            <p>Implementação da linha de registro público organizado (fase documental).</p>
+          </div>
+          <div class="timeline-item" data-category="exposicao">
+            <h4>Jun 2025 • Consolidação do Registro Jockey</h4>
+            <p>Finalização do primeiro conjunto fotográfico institucional.</p>
+          </div>
+          <div class="timeline-item" data-category="institucional">
+            <h4>Mai 2025 • Definição de Diretrizes</h4>
+            <p>Criação das bases conceituais para narrativa de capital cultural.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../images/logos/logo_JC.jpeg" alt="JC Arte & Capital">
+          <span>JC Arte & Capital</span>
+        </div>
+        <p>&copy; 2025 JC Arte & Capital. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js"></script>
+  <script>
+    // Filtro básico
+    const chips = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.press-card, .award-card, .timeline-item');
+    chips.forEach(chip=>chip.addEventListener('click',()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      cards.forEach(card=>{
+        if(f==='all'){card.style.display='';return;}
+        const cats = (card.dataset.category||'').split(/\s+/);
+        card.style.display = cats.includes(f)?'':'none';
+      });
+    }));
+  </script>
+</body>
+</html>
