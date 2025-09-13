@@ -150,17 +150,31 @@ class ContactPage {
     }
 
     async submitForm(formData) {
-        // Simulate API call - replace with actual endpoint
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate success
-                if (Math.random() > 0.1) {
-                    resolve({ success: true });
-                } else {
-                    reject(new Error('Simulated error'));
-                }
-            }, 2000);
-        });
+        // Send to FormSubmit service
+        try {
+            const response = await fetch('https://formsubmit.co/edson@jcartecapital.com.br', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('message'),
+                    _subject: 'Novo contato do site JC Arte Capital',
+                    _captcha: 'false'
+                })
+            });
+
+            if (response.ok) {
+                return { success: true };
+            } else {
+                throw new Error('Falha no envio');
+            }
+        } catch (error) {
+            throw new Error('Erro de conexão: ' + error.message);
+        }
     }
 
     showSuccessForm() {
