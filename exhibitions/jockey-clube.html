@@ -113,5 +113,24 @@
     </footer>
 
     <script src="../scripts/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.gallery-grid.basic-grid .artwork-image img');
+        items.forEach(img => {
+          if (img.complete) classify(img); else img.addEventListener('load', () => classify(img));
+        });
+        function classify(img){
+          const wrap = img.parentElement;
+            if(!wrap) return;
+            const {naturalWidth:w, naturalHeight:h} = img;
+            wrap.classList.remove('landscape','portrait','square');
+            if(!w || !h) return;
+            const ratio = w / h;
+            if (ratio > 1.25) wrap.classList.add('landscape');
+            else if (ratio < 0.85) wrap.classList.add('portrait');
+            else wrap.classList.add('square');
+        }
+      });
+    </script>
 </body>
 </html>
