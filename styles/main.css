@@ -1331,15 +1331,17 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 90px;
         flex-direction: column;
         background-color: var(--white);
         width: 100%;
+        height: calc(100vh - 90px);
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         z-index: 1000;
         padding: 2rem 0;
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -1358,35 +1360,88 @@ section {
 
     .dropdown-menu {
         position: static;
-        display: none;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
         box-shadow: none;
-        background: var(--background-light);
+        background: rgba(199, 200, 201, 0.1);
         padding: 0.5rem 0;
         margin-top: 0.5rem;
+        border-radius: 8px;
     }
 
-    .dropdown:hover .dropdown-menu {
-        display: block;
+    .dropdown-item {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .dropdown-item:hover {
+        background: rgba(38, 187, 190, 0.1);
+        color: var(--accent-cyan);
     }
 
     /* Hero Section Mobile */
     .hero {
-        min-height: 80vh;
-        padding: 100px 0 50px;
+        min-height: 100vh;
+        padding: 120px 24px 60px;
     }
 
     .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    .hero-visual {
+        order: 1;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero-icon {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .main-icon {
+        width: 120px;
+        height: auto;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 1rem;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .mosaic-card {
+        min-width: 280px;
+        max-width: 320px;
+        padding: 30px;
+    }
+
+    .mosaic-preview {
+        height: 160px;
+        margin-bottom: 20px;
     }
 
     .hero-description {
@@ -1445,28 +1500,69 @@ section {
 @media (max-width: 480px) {
     .navbar {
         padding: 0.75rem 0;
+        height: 80px;
+    }
+
+    .nav-container {
+        height: 80px;
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        top: 80px;
+        height: calc(100vh - 80px);
     }
 
     .nav-logo img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 
     .nav-title {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .nav-subtitle {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 100px 1rem 60px;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+        gap: 30px;
+    }
+
+    .hero-visual {
+        height: 250px;
+    }
+
+    .main-icon {
+        width: 100px;
     }
 
     .hero-title {
-        font-size: 2rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .mosaic-card {
+        min-width: 260px;
+        max-width: 300px;
+        padding: 25px;
+    }
+
+    .mosaic-preview {
+        height: 140px;
+        margin-bottom: 16px;
     }
 
     .plans-promo-section {
