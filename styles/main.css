@@ -197,9 +197,126 @@ body {
     transition: var(--transition-fast);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+/* Special styling for Plans link */
+.nav-link[href="pages/planos.html"] {
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(38, 187, 190, 0.3);
+    transition: var(--transition-fast);
+}
+
+.nav-link[href="pages/planos.html"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.4);
+}
+
+.nav-link[href="pages/planos.html"]::after {
+    display: none;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+}
+
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.nav-subtitle {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1;
+}
+
+.nav-divider {
+    margin: 2px 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-cyan) 0%, transparent 100%);
     width: 100%;
+}
+
+.nav-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-cyan);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-cyan);
+    transition: var(--transition-fast);
+}
+
+/* Special styling for Plans link */
+.nav-link[href="pages/planos.html"] {
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(38, 187, 190, 0.3);
+    transition: var(--transition-fast);
+}
+
+.nav-link[href="pages/planos.html"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.4);
+}
+
+.nav-link[href="pages/planos.html"]::after {
+    display: none;
 }
 
 /* Dropdown */
@@ -999,178 +1116,235 @@ section {
     100% { transform: translateY(20px); opacity: 0; }
 }
 
-/* Responsive Design */
+/* Plans Promotion Section */
+.plans-promo-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #2d4a87 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.plans-promo-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(38, 187, 190, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(188, 111, 113, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.plans-promo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.plans-promo-text h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.plans-promo-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.plans-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-cyan);
+    backdrop-filter: blur(10px);
+}
+
+.highlight-item i {
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+.highlight-item span {
+    font-weight: 500;
+}
+
+.large-btn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+    border-radius: 50px;
+    transition: var(--transition-fast);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.3);
+}
+
+.large-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(38, 187, 190, 0.4);
+}
+
+.large-btn i {
+    transition: transform 0.3s ease;
+}
+
+.large-btn:hover i {
+    transform: translateX(5px);
+}
+
+.plans-promo-visual {
+    position: relative;
+}
+
+.promo-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-header i {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mini-plan {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-light);
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.mini-plan:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.mini-plan.featured {
+    border-left-color: #c0c0c0;
+    background: rgba(192, 192, 192, 0.1);
+}
+
+.mini-plan.premium {
+    border-left-color: #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.plan-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.plan-feature {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    display: block;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -8px;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--accent-pink), #d15658);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Responsive Design for Plans Promo */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background: var(--white);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 40px;
-        transition: var(--transition-fast);
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-title {
-        font-size: 0.9rem;
-    }
-    
-    .nav-subtitle {
-        font-size: 0.7rem;
-    }
-    
-    .hero-content {
+    .plans-promo-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 3rem;
+    }
+    
+    .plans-promo-text {
         text-align: center;
-        padding-top: 80px;
     }
     
-    .hero-text {
-        padding-top: 0;
+    .plans-highlights {
+        max-width: 400px;
+        margin: 0 auto 3rem;
     }
     
-    .hero-icon {
-        top: -150px;
+    .promo-card {
+        padding: 2rem;
     }
     
-    .hero-visual {
-        height: 300px;
-    }
-    
-    .mosaic-card {
-        max-width: 450px;
-        min-width: 350px;
-        padding: 40px;
-    }
-    
-    .mosaic-preview {
-        height: 180px;
-        gap: 14px;
-    }
-    
-    .mosaic-info h3 {
-        font-size: 1.5rem;
-    }
-    
-    .mosaic-info p {
-        font-size: 1.2rem;
-    }
-    
-    .mosaic-cta {
-        font-size: 1.1rem;
-    }
-    
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .contact-methods {
-        gap: 24px;
-    }
-    
-    .contact-method {
-        align-items: flex-start;
-    }
-    
-    .contact-form-container {
-        padding: 24px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
+    .large-btn {
         width: 100%;
-        max-width: 280px;
-    }
-    
-    .exhibitions-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    section {
-        padding: 80px 0;
-    }
-    
-    .visual-grid {
-        height: 300px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
+        justify-content: center;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
+    .plans-promo-section {
+        padding: 80px 0;
     }
     
-    .nav-container {
-        padding: 0 16px;
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
     
-    .hero {
-        padding: 100px 16px 60px;
-    }
-    
-    .hero::before {
-        width: 600px;
-        height: 600px;
-        left: 70%;
-        opacity: 0.025;
-    }
-    
-    .main-icon {
-        width: 240px;
-    }
-    
-    .card-content {
-        padding: 24px;
-    }
-    
-    .hero-buttons {
-        gap: 16px;
-    }
-    
-    .mosaic-card {
-        max-width: 380px;
-        min-width: 300px;
-        padding: 35px;
-    }
-    
-    .mosaic-preview {
-        height: 150px;
-        gap: 12px;
-    }
-    
-    .mosaic-info h3 {
-        font-size: 1.4rem;
-    }
-    
-    .mosaic-info p {
-        font-size: 1.1rem;
-    }
-    
-    .mosaic-cta {
-        font-size: 1rem;
+    .highlight-item i {
+        font-size: 1.5rem;
     }
 }

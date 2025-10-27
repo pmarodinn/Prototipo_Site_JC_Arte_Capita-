@@ -1,0 +1,652 @@
+/* Planos Page Styles */
+
+/* Hero Section */
+.hero-plans {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(135deg, var(--primary-navy) 0%, #2d4a87 50%, var(--accent-cyan) 100%),
+        radial-gradient(circle at 20% 80%, rgba(188, 111, 113, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(38, 187, 190, 0.3) 0%, transparent 50%);
+    background-size: 100% 100%, 800px 800px, 600px 600px;
+    animation: gradientShift 10s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+    from {
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    to {
+        filter: hue-rotate(10deg) saturate(1.1);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 41, 88, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title-main {
+    display: block;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+    to {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+    }
+}
+
+.hero-title-sub {
+    display: block;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, #1e9ba0 100%);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(38, 187, 190, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.scroll-arrow {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--white), transparent);
+    position: relative;
+    animation: scrollBounce 2s infinite;
+}
+
+.scroll-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+@keyframes scrollBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-10px);
+        opacity: 0.7;
+    }
+    60% {
+        transform: translateY(-5px);
+        opacity: 0.9;
+    }
+}
+
+/* Plans Section */
+.plans-section {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, #fafbfc, #ffffff);
+    position: relative;
+}
+
+.plans-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--primary-navy), transparent);
+    opacity: 0.02;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+/* Plan Cards */
+.plan-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.plan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+    transition: var(--transition-fast);
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Variants */
+.plan-basic::before {
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+}
+
+.plan-silver::before {
+    background: linear-gradient(135deg, #c0c0c0, #8a8a8a);
+}
+
+.plan-gold::before {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+/* Featured and Premium Badges */
+.featured-badge, .premium-badge {
+    position: absolute;
+    top: -1px;
+    right: 2rem;
+    background: linear-gradient(135deg, var(--accent-pink), #d15658);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 15px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(188, 111, 113, 0.3);
+}
+
+.premium-badge {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.featured .plan-card, .premium .plan-card {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, var(--accent-pink), var(--accent-cyan)) border-box;
+}
+
+.premium .plan-card {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #ffd700, #ff8c00) border-box;
+}
+
+/* Plan Header */
+.plan-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.plan-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-navy), #2d4a87);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(31, 41, 88, 0.2);
+}
+
+.plan-silver .plan-icon {
+    background: linear-gradient(135deg, #c0c0c0, #8a8a8a);
+}
+
+.plan-gold .plan-icon {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+.plan-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.plan-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    margin-top: 1rem;
+}
+
+.price-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.price-details {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Plan Features */
+.plan-features {
+    margin-bottom: 2.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.feature-item:hover {
+    background: rgba(38, 187, 190, 0.05);
+}
+
+.feature-item i {
+    color: var(--accent-cyan);
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    min-width: 20px;
+}
+
+.feature-item span {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-item.highlight {
+    background: linear-gradient(135deg, rgba(38, 187, 190, 0.1), rgba(188, 111, 113, 0.05));
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.feature-item.premium-feature {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.05));
+    border-left: 4px solid #ffd700;
+}
+
+.feature-item.premium-feature i {
+    color: #ff8c00;
+}
+
+/* Plan CTA */
+.plan-cta {
+    text-align: center;
+}
+
+.btn-plan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-plan::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-plan:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-basic {
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.3);
+}
+
+.btn-silver {
+    background: linear-gradient(135deg, #c0c0c0, #8a8a8a);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(192, 192, 192, 0.3);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.btn-plan:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #2d4a87 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(38, 187, 190, 0.1) 0%, transparent 70%);
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-fast);
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--accent-cyan), #1e9ba0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(38, 187, 190, 0.3);
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.benefit-item p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fafbfc 0%, var(--white) 100%);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary.large, .btn-secondary.large {
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .plan-card {
+        padding: 2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary.large, .btn-secondary.large {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .plan-card {
+        padding: 1.5rem;
+    }
+    
+    .plan-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .price-value {
+        font-size: 2rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
