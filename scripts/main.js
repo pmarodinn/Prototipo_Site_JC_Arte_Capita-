@@ -439,13 +439,13 @@ class JCWebsite {
 
     // Mobile menu
     setupMobileMenu() {
-        const hamburger = document.querySelector('.hamburger');
+        const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
-                hamburger.classList.toggle('active');
+                navToggle.classList.toggle('active');
             });
 
             // Close menu when clicking on links
@@ -453,8 +453,16 @@ class JCWebsite {
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
+                    navToggle.classList.remove('active');
                 });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
             });
         }
     }
